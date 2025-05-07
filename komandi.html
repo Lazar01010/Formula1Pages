@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Команди F1 2025</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #000;
+    }
+
+    header {
+      background: linear-gradient(to right, #fffdfd, #eceaea);
+      position: relative;
+    }
+
+    .Rectangle-1 {
+      width: 100%;
+      height: 100px;
+      background-image: linear-gradient(to right, #fbe4e4, #ff6e6e);
+    }
+
+    .image-logo {
+      width: 250px;
+      height: 75px;
+      margin-top: 15px;
+      margin-left: 45px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .menu a {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px;
+      text-decoration: none;
+      color: #000;
+      padding: 10px 20px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #e50000;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #c00;
+      text-shadow: 1px 1px 2px #999;
+    }
+
+    .team-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      padding: 20px 40px;
+    }
+
+    .team-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-card img {
+      width: 100%;
+      max-width: 120px;
+      height: 100px;
+      object-fit: contain;
+      margin: 0 auto 15px;
+      display: block;
+    }
+
+    .team-card p {
+      margin: 5px 0;
+    }
+
+    /* Гамбургер меню */
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 20px;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .menu a {
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      .team-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="Rectangle-1">
+      <img src="f1logo.png" alt="F1 Logo" class="image-logo">
+      <!-- Гамбургер кнопка -->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="f1page.html">ГОЛОВНА</a>
+      <a href="novini.html">НОВИНИ</a>
+      <a href="rozklad.html">КАЛЕНДАР</a>
+      <a href="championship.html">ЧЕМПІОНАТ</a>
+      <a href="komandi.html">КОМАНДИ</a>
+    </nav>
+  </header>
+
+  <h1>КОМАНДИ F1 2025</h1>
+
+  <div class="team-container">
+    <div class="team-card">
+      <img src="redbull.jpg" alt="Red Bull">
+      <p><strong>Керівник:</strong> Крістіан Хорнер</p>
+      <p><strong>Пілоти:</strong><br>Макс Ферстаппен<br>Юкі Цунода</p>
+      <p><strong>Кількість титулів:</strong> 6</p>
+    </div>
+    
+    <div class="team-card">
+      <img src="mercedes.png" alt="Mercedes">
+      <p><strong>Керівник:</strong> Тото Вольф</p>
+      <p><strong>Пілоти:</strong><br>Джордж Расселл<br>Андреа Кімі Антонеллі</p>
+      <p><strong>Кількість титулів:</strong> 8</p>
+    </div>
+    
+    <div class="team-card">
+      <img src="ferrari.png" alt="Ferrari">
+      <p><strong>Керівник:</strong> Фредерік Вассер</p>
+      <p><strong>Пілоти:</strong><br>Шарль Леклер<br>Льюїс Хемілтон</p>
+      <p><strong>Кількість титулів:</strong> 16</p>
+    </div>
+    
+    <div class="team-card">
+      <img src="mclaren.png" alt="McLaren">
+      <p><strong>Керівник:</strong> Андреа Стелла</p>
+      <p><strong>Пілоти:</strong><br>Ландо Норріс<br>Оскар Піастрі</p>
+      <p><strong>Кількість титулів:</strong> 8</p>
+    </div>
+    
+    <div class="team-card">
+      <img src="racingbulls.png" alt="Racing Bulls">
+      <p><strong>Керівник:</strong> Лоран Мекіс</p>
+      <p><strong>Пілоти:</strong><br>Ліам Лоусон<br>Ісаак Хаджар</p>
+      <p><strong>Кількість титулів:</strong> 0</p>
+    </div>
+
+    <div class="team-card">
+      <img src="haas.png" alt="Haas">
+      <p><strong>Керівник:</strong> Айо Комацу</p>
+      <p><strong>Пілоти:</strong><br>Олівер Берман<br>Естебан Окон</p>
+      <p><strong>Кількість титулів:</strong> 0</p>
+    </div>
+
+    <div class="team-card">
+      <img src="alpine.png" alt="Alpine">
+      <p><strong>Керівник:</strong> Олівер Окс</p>
+      <p><strong>Пілоти:</strong><br>П'єр Гаслі<br>Джек Дуен</p>
+      <p><strong>Кількість титулів:</strong> 0</p>
+    </div>
+
+    <div class="team-card">
+      <img src="kicksauber.png" alt="Kick Sauber">
+      <p><strong>Керівник:</strong> Андреа Бьотто</p>
+      <p><strong>Пілоти:</strong><br>Габріеле Бортолето<br>Ніко Хюлькенберг</p>
+      <p><strong>Кількість титулів:</strong> 0</p>
+    </div>
+
+    <div class="team-card">
+      <img src="astonmarting.png" alt="Aston Martin">
+      <p><strong>Керівник:</strong> Майк Крак</p>
+      <p><strong>Пілоти:</strong><br>Фернандо Алонсо<br>Ленс Стролл</p>
+      <p><strong>Кількість титулів:</strong> 0</p>
+    </div>
+
+    <div class="team-card">
+      <img src="williams.png" alt="Williams">
+      <p><strong>Керівник:</strong> Джеймс Воуэлз</p>
+      <p><strong>Пілоти:</strong><br>Карлос Сайнс<br>Олександр Албон</p>
+      <p><strong>Кількість титулів:</strong> 9</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

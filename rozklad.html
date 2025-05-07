@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Календар F1 2025</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #000;
+    }
+
+    header {
+      background: linear-gradient(to right, #fffdfd, #eceaea);
+      position: relative;
+    }
+    .Rectangle-1 {
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to right, #fbe4e4, #ff6e6e);
+  position: relative;
+}
+
+    .image-logo {
+      width: 250px;
+      height: 75px;
+      margin-top: 15px;
+      margin-left: 45px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .menu a {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px;
+      text-decoration: none;
+      color: #000;
+      padding: 10px 20px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #e50000;
+      
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #c00;
+      text-shadow: 1px 1px 2px #999;
+    }
+
+    /* Таблиця календаря */
+    table {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      font-size: 16px;
+    }
+
+    th {
+      background-color: #fbe4e4;
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+
+
+    /* Гамбургер меню (якщо потрібно) */
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 20px;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        z-index: 1;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .menu a {
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+
+      /* іконка */
+      .menu-toggle {
+        display: flex;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+      
+      /* Таблиця на мобільних */
+      table {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="Rectangle-1">
+    <img src="f1logo.png" alt="F1 Logo" class="image-logo" />
+    <!-- Гамбургер меню -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="menu" id="menu">
+    <a href="f1page.html">ГОЛОВНА</a>
+    <a href="novini.html">НОВИНИ</a>
+    <a href="rozklad.html">КАЛЕНДАР</a>
+    <a href="championship.html">ЧЕМПІОНАТ</a>
+    <a href="komandi.html">КОМАНДИ</a>
+  </nav>
+</header>
+
+<h1>КАЛЕНДАР F1 2025</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>ГРАН-ПРІ</th>
+      <th>ТРАСА</th>
+      <th>ДОВЖИНА</th>
+      <th>КРУГИ</th>
+      <th>ПЕРЕМОЖЕЦЬ</th>
+      <th>ДАТА</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>Абу-Дабі</td>
+        <td>Яс-Маріна</td>
+        <td>5281 M</td>
+        <td>58</td>
+        <td>-</td>
+        <td>07.12</td>
+    </tr>
+    <tr>
+        <td>Катар</td>
+        <td>Лосаїл</td>
+        <td>5419 M</td>
+        <td>57</td>
+        <td>-</td>
+        <td>30.11</td>
+    </tr>
+    <tr>
+        <td>Лас-Вегас</td>
+        <td>Лас-Вегас</td>
+        <td>6201 M</td>
+        <td>50</td>
+        <td>-</td>
+        <td>22.11</td>
+    </tr>
+    <tr>
+        <td>Сан-Паулу</td>
+        <td>Сан-Паулу</td>
+        <td>4309 M</td>
+        <td>71</td>
+        <td>-</td>
+        <td>09.11</td>
+    </tr>
+    <tr>
+        <td>Мехіко</td>
+        <td>Мехіко</td>
+        <td>4304 M</td>
+        <td>71</td>
+        <td>-</td>
+        <td>26.10</td>
+    </tr>
+    <tr>
+        <td>США</td>
+        <td>Остін</td>
+        <td>5513 M</td>
+        <td>56</td>
+        <td>-</td>
+        <td>19.10</td>
+    </tr>
+    <tr>
+        <td>Сінгапур</td>
+        <td>Марина-Бей</td>
+        <td>4940 M</td>
+        <td>62</td>
+        <td>-</td>
+        <td>05.10</td>
+    </tr>
+    <tr>
+        <td>Азербайджан</td>
+        <td>Баку</td>
+        <td>6003 M</td>
+        <td>51</td>
+        <td>-</td>
+        <td>21.09</td>
+    </tr>
+    <tr>
+        <td>Італія</td>
+        <td>Монца</td>
+        <td>5793 M</td>
+        <td>53</td>
+        <td>-</td>
+        <td>07.09</td>
+    </tr>
+    <tr>
+        <td>Нідерланди</td>
+        <td>Зандфорт</td>
+        <td>4259 M</td>
+        <td>72</td>
+        <td>-</td>
+        <td>31.08</td>
+    </tr>
+    <tr>
+        <td>Угорщина</td>
+        <td>Хунгарорінг</td>
+        <td>4381 M</td>
+        <td>70</td>
+        <td>-</td>
+        <td>03.08</td>
+    </tr>
+    <tr>
+        <td>Бельгія</td>
+        <td>Спа</td>
+        <td>7004 M</td>
+        <td>44</td>
+        <td>-</td>
+        <td>27.07</td>
+    </tr>
+    <tr>
+        <td>Великобританія</td>
+        <td>Сільверстоун</td>
+        <td>5891 M</td>
+        <td>52</td>
+        <td>-</td>
+        <td>06.07</td>
+    </tr>
+    <tr>
+        <td>Австрія</td>
+        <td>Шпільберг</td>
+        <td>4318 M</td>
+        <td>71</td>
+        <td>-</td>
+        <td>29.06</td>
+    </tr>
+    <tr>
+        <td>Канада</td>
+        <td>Монреаль</td>
+        <td>4361 М</td>
+        <td>70</td>
+        <td>-</td>
+        <td>15.06</td>
+    </tr>
+    <tr>
+        <td>Іспанія</td>
+        <td>Барселона</td>
+        <td>4657 М</td>
+        <td>66</td>
+        <td>-</td>
+        <td>01.06</td>
+    </tr>
+    <tr>
+        <td>Монако</td>
+        <td>Монако</td>
+        <td>3337 М</td>
+        <td>78</td>
+        <td>-</td>
+        <td>25.05</td>
+    </tr>
+    <tr>
+      <td>Італія</td>
+      <td>Імола</td>
+      <td>4909 М</td>
+      <td>63</td>
+      <td>-</td>
+      <td>18.05</td>
+    </tr>
+    <tr>
+      <td>США</td>
+      <td>Маямі</td>
+      <td>5412 М</td>
+      <td>57</td>
+      <td>О. Піастрі</td>
+      <td>04.05</td>
+    </tr>
+    <tr>
+      <td>Саудівська Аравія</td>
+      <td>Джидда</td>
+      <td>6173 М</td>
+      <td>50</td>
+      <td>О. Пастрі</td>
+      <td>20.04</td>
+    </tr>
+    <tr>
+      <td>Бахрейн</td>
+      <td>Бахрейн</td>
+      <td>5412 М</td>
+      <td>57</td>
+      <td>О. Пастрі</td>
+      <td>13.04</td>
+    </tr>
+    <tr>
+      <td>Японія</td>
+      <td>Сузука</td>
+      <td>5807 М</td>
+      <td>52</td>
+      <td>М. Ферстаппен</td>
+      <td>06.04</td>
+    </tr>
+    <tr>
+      <td>Китай</td>
+      <td>Шанхай</td>
+      <td>5451 М</td>
+      <td>56</td>
+      <td>О. Пастрі</td>
+      <td>23.03</td>
+    </tr>
+    <tr>
+      <td>Австралія</td>
+      <td>Альберт-Парк</td>
+      <td>5478 М</td>
+      <td>56</td>
+      <td>Л. Норріс</td>
+      <td>16.03</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>

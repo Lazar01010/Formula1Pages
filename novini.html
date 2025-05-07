@@ -1,0 +1,239 @@
+<!DOCTYPE html>  
+<html lang="uk">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Новини F1</title>  
+  <style>  
+    * {  
+      box-sizing: border-box;  
+      margin: 0;  
+      padding: 0;  
+      font-family: 'Segoe UI', sans-serif;  
+    }  
+
+    body {  
+      background-color: #f9f9f9;  
+      color: #000;  
+    }  
+
+    header {  
+      background: linear-gradient(to right, #fffdfd, #eceaea);  
+      position: relative;  
+    }  
+
+    .Rectangle-1 {
+      width: 100%;
+      height: 100px;
+      background-image: linear-gradient(to right, #fbe4e4, #ff6e6e);
+      position: relative;
+    }
+
+
+    .image-logo {
+      width: 250px;
+      height: 75px;
+      margin-top: 15px;
+      margin-left: 45px;
+    }  
+
+    .menu {  
+      display: flex;  
+      justify-content: center;  
+      flex-wrap: wrap;  
+      gap: 20px;  
+      padding: 10px 0;  
+      background-color: #fff;  
+    }  
+
+    .menu a {  
+      font-family: Georgia, 'Times New Roman', Times, serif;  
+      font-size: 20px;  
+      text-decoration: none;  
+      color: #000;  
+      padding: 10px 20px;  
+      transition: 0.3s;  
+    }  
+
+    .menu a:hover {  
+      color: #e50000;  
+    }  
+
+    h1 {  
+      text-align: center;  
+      margin: 40px 0 20px;  
+      color: #c00;  
+      text-shadow: 1px 1px 2px #999;  
+    }  
+
+    .news-container {  
+      display: grid;  
+      grid-template-columns: repeat(3, 1fr);  
+      gap: 20px;  
+      padding: 20px;  
+    }  
+
+    .news-card {  
+      position: relative;  
+      width: 100%;  
+      overflow: hidden;  
+      border-radius: 10px;  
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+      display: flex;  
+      flex-direction: column;  
+    }  
+
+    .news-card img {  
+      width: 100%;  
+      height: 200px; /* обмежимо висоту для збереження цілісності */  
+      object-fit: cover;  
+    }  
+
+    .category {  
+      position: absolute;  
+      top: 15px;  
+      left: 15px;  
+      background: red;  
+      color: #fff;  
+      padding: 8px 14px;  
+      font-size: 20px;  
+      font-weight: bold;  
+      border-radius: 4px;  
+      z-index: 2;  
+    }  
+
+    .news-content {  
+      padding: 15px;  
+      text-align: center;  
+      color: #000;  
+    }  
+
+    .news-content h2 {  
+      font-size: 20px;  
+      margin-bottom: 10px;  
+    }  
+
+      
+    .description {  
+      font-size: 16px;  
+      color: #333;  
+      text-align: justify;  
+    }  
+
+    /* В мобільних */  
+    @media (max-width: 768px) {  
+      .menu {  
+        display: none;  
+        flex-direction: column;  
+        background-color: #fff;  
+        position: absolute;  
+        top: 100px;  
+        left: 0;  
+        width: 100%;  
+        padding: 10px 0;  
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
+        z-index: 1;  
+      }  
+
+      .menu.show {  
+        display: flex;  
+      }  
+
+      .menu a {  
+        font-size: 16px;  
+        padding: 10px 15px;  
+      }  
+
+      .menu-toggle {  
+        display: flex;  
+      }  
+
+      .news-container {  
+        grid-template-columns: 1fr;  
+      }  
+
+      .news-content h2 {  
+        font-size: 18px;  
+      }  
+    }  
+  </style>  
+</head>  
+<body>  
+  <header>  
+    <div class="Rectangle-1">  
+      <img src="f1logo.png" alt="F1 Logo" class="image-logo" />  
+      <div class="menu-toggle" onclick="toggleMenu()">  
+        <span></span>  
+        <span></span>  
+        <span></span>  
+      </div>  
+    </div>  
+    <nav class="menu" id="menu">  
+      <a href="f1page.html">ГОЛОВНА</a>  
+      <a href="#">НОВИНИ</a>  
+      <a href="rozklad.html">КАЛЕНДАР</a>  
+      <a href="championship.html">ЧЕМПІОНАТ</a>  
+      <a href="komandi.html">КОМАНДИ</a>  
+    </nav>  
+  </header>  
+
+  <h1>Новини F1</h1>  
+
+  <div class="news-container">
+
+    <div class="news-card">
+      <img src="verstappenaston.jpg" alt="Верстаппен переходить в Астон Мартін" />
+      <div class="category">Автоспорт</div>
+      <div class="news-content">
+        <h2> Ферстаппен переходить до Aston Martin?</h2>
+        <p class="description">Партнерство Макса Ферстаппена та Red Bull стало гарячою темою в паддоку Гран Прі Саудівській...</p>
+      </div>
+    </div>
+  
+    <div class="news-card">  
+      <img src="poster1.jpg" alt="Гран Прі Саудівської Аравії" />  
+      <div class="category">Автоспорт</div>  
+      <div class="news-content">  
+        <h2>Гран Прі Саудівської Аравії: результати кваліфікації</h2>  
+        <p class="description">Детальний огляд та результати найцікавіших моментів у кваліфікації. Нові рекорди та інтерв’ю з учасниками.</p>  
+      </div> 
+    </div>
+
+    <div class="news-card">
+      <img src="hornerplanyvav.jpg" alt="Хорнер та Макс Ферстаппен">
+      <div class="category">Автоспорт</div>
+      <div class="news-content">
+        <h2>Крістіан Хорнер планував оскаржити штраф Ферстаппена</h2>
+        <p class="description">Макс Ферстаппен стартував з поулу в Джидді, але фінішував другим, отримавши штраф за..</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="mclarenkrila.jpg" alt="Автомобіль Макларену"/>
+      <div class="category">Автоспорт</div>
+      <div class="news-content">
+        <h2>Гнучні крила McLaren знову привернули увагу</h2>
+        <p class="description">В соціальних мережах з’явились нові кадри, як заднє крило McLaren згинається під час Гра Прі...</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="ferrstapen&bolid.jpg" alt="Ферстаппен та болід РБ">
+      <div class="category">Автоспорт</div>
+      <div class="news-content">
+        <h2>Ферстаппен пропустить практику Гран-Прі Бахрейну</h2>
+        <p class="description">Чотириразовий чемпіон Ф1 Макс Ферстаппен збирається пропустити частину вікенду Гран Прі...</p>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="yuki_tsunoda.jpg" alt="Юкі Цунода">
+      <div class="category">Автоспорт</div>
+      <div class="news-content">
+        <h2>Цунода замінить Лоусона в Red Bull на Гран-Прі Японії</h2>
+        <p class="description">Команда Red Bull оголосила, що Юкі Цунода замінить Ліама Лоусона у старшій команді Red Bull Racing,...</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

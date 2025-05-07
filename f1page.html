@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Новини</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #000;
+    }
+
+    header {
+      background: linear-gradient(to right, #fffdfd, #eceaea);
+    }
+
+    .Rectangle-1 {
+      width: 100%;
+      height: 100px;
+      background-image: linear-gradient(to right, #fbe4e4, #ff6e6e);
+      position: relative;
+    }
+
+    .image-logo {
+      width: 250px;
+      height: 75px;
+      margin-top: 15px;
+      margin-left: 45px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .menu a {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px;
+      text-decoration: none;
+      color: #000;
+      padding: 10px 20px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #e50000;
+    }
+
+    .news-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .news-card {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .news-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .category {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: red;
+      color: #fff;
+      padding: 8px 14px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    .news-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
+      padding: 0 20px;
+      width: 90%;
+    }
+
+    .news-content h2 {
+      font-size: 28px;
+      line-height: 1.4;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .date {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      font-size: 15px;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
+      z-index: 2;
+    }
+
+    /* Гамбургер-кнопка */
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 20px;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .menu a {
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .news-container {
+        grid-template-columns: 1fr;
+      }
+
+      .news-content h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="Rectangle-1">
+      <img src="f1logo.png" alt="F1 Logo" class="image-logo" />
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="f1page.html">ГОЛОВНА</a>
+      <a href="novini.html">НОВИНИ</a>
+      <a href="rozklad.html">КАЛЕНДАР</a>
+      <a href="championship.html">ЧЕМПІОНАТ</a>
+      <a href="komandi.html">КОМАНДИ</a>
+    </nav>
+  </header>
+
+  <div class="news-container">
+    <div class="news-card">
+      <img src="poster1.jpg" alt="Гран Прі Саудівської Аравії">
+      <div class="category">Автоспорт</div>
+      <div class="news-content">
+        <h2>Гран Прі Саудівської Аравії: результати кваліфікації</h2>
+      </div>
+      <div class="date">19 квітня 2025</div>
+    </div>
+
+    <div class="news-card">
+      <img src="poster2.jpg" alt="Хорнер планував оскаржити штраф">
+      <div class="category">Автоспорт</div>
+      <div class="news-content">
+        <h2>Хорнер планував оскаржити штраф Ферстаппена</h2>
+      </div>
+      <div class="date">19 квітня 2025</div>
+    </div>
+
+    <div class="news-card">
+      <img src="poster3.jpg" alt="Трансляції F1 в Україні">
+      <div class="category">Автоспорт</div>
+      <div class="news-content">
+        <h2>Трансляції F1 в Україні: де дивитись сезон 2025 року?</h2>
+      </div>
+      <div class="date">18 квітня 2025</div>
+    </div>
+
+    <div class="news-card">
+      <img src="poster4.jpg" alt="Заступник президента FIA">
+      <div class="category">Автоспорт</div>
+      <div class="news-content">
+        <h2>Заступник президента FIA звільнився через порушення</h2>
+      </div>
+      <div class="date">18 квітня 2025</div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
